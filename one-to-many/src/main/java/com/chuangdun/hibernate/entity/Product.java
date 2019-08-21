@@ -10,8 +10,10 @@ import java.io.Serializable;
 /**
  * @author nick
  */
-@Data
+
 @Entity
+@Setter
+@Getter
 @Builder()
 @Where(clause = "deleted = 0")
 @SQLDelete(sql = "update T_PRODUCT set deleted = 1 where id = ?")

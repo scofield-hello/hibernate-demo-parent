@@ -9,8 +9,9 @@ import java.io.Serializable;
 import java.util.HashSet;
 import java.util.Set;
 
-@Data
 @Entity
+@Setter
+@Getter
 @Builder()
 @Where(clause = "deleted=0")
 @SQLDelete(sql = "update T_CATEGORY set deleted = 1 where id=?")
